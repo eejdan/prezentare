@@ -1,7 +1,22 @@
 import React, { useState } from 'react';
-import { Animate } from 'react-simple-animate'
+import { Animate } from 'react-simple-animate';
+import ReactMapboxGl from "react-mapbox-gl";
 import "./MainSlide.css"
 
+const Map = ReactMapboxGl({
+  accessToken:
+    "pk.eyJ1IjoiZWVkYW4iLCJhIjoiY2tscnQzeDF3MXE2eDJvcXl2ZjJoaHFqdyJ9.ccglo-4xS2Ac9BVeG_d6zw"
+});
+function menuItem(props) {
+  return (
+    <div className="menuitem">
+      <img src={props.imgsrc}></img>
+      <title>{props.title}</title>
+      <description>{props.desc}</description>
+      <price>{props.price}</price>
+    </div>
+  );
+}
 export function MainSlide() {
     const [playMenu, setPlayMenu] = useState();
     const [playHarta, setPlayHarta] = useState();
@@ -40,14 +55,17 @@ export function MainSlide() {
               transform: "translateY(0)"
             }}>
             <slide>
-              <div id='map' style='width: 400px; height: 300px;'></div>
-              <script>
-                mapboxgl.accessToken = 'pk.eyJ1IjoiZWVkYW4iLCJhIjoiY2tscnNpcm1nMXBwejJxbjFnZ3loZm41ayJ9.xHOeRVn5X_eeTayRrL57_g';
-                var map = new mapboxgl.Map({
-                container: 'map',
-                style: 'mapbox://styles/mapbox/streets-v11'
-                });
-              </script>
+              Luca Centru
+            <Map
+              center={[28.05441933476897,45.433565428283494]}
+              zoom={[18]}
+              style="mapbox://styles/mapbox/streets-v9" // eslint-disable-line
+              containerStyle={{
+                height: "95%",
+                width: "95%"
+              }}
+            >
+            </Map>
             </slide>
           </Animate>
           <Animate
