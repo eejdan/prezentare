@@ -1,15 +1,17 @@
 import React from "react"
-import Header from "./Header.js"
-import MainSlide from "./MainSlide.js"
+import { MainSlide } from "./MainSlide.js"
 import "./App.css"
+import NavBar from "./NavBar.js"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default class App extends React.Component {
     render() {
+        document.body.style.overflow = "hidden";
         return(
-            <div>
-                <Header />
+            <React.Fragment>
+                <NavBar />
                 <MainSlide />
-            </div>
+            </React.Fragment>
         );
     }
 }

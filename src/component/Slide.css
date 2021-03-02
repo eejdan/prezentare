@@ -1,0 +1,26 @@
+slide {
+    position: absolute;
+    padding: 10px;
+    width: 100%;
+    min-height: 200px;
+    height: 100%;
+    border: 1px solid #D1D1D1;
+    border-top: none;
+    background: #fefae0;
+    box-shadow: 3px 10px 15px -3px rgba(0,0,0,0.61);
+    left: -200%;
+}
+/*.slide-trs-enter {
+    left: -200%;
+}
+.slide-trs-enter-active {
+    left: 0;
+    transition: 500ms left ease-in-out;
+}
+.slide-trs-exit {
+    left: 0;
+}
+.slide-trs-exit-active {
+    left: 200%;
+    transition: 500ms left ease-in-out;
+}*/
