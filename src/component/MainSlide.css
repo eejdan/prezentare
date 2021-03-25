@@ -39,9 +39,9 @@ mainsl > options > #right {
 mainsl > slides {
     width: 100%;
     height: auto;
-    box-sizing: content-box;
 }
 slide {
+    display: inline;
     position: absolute;
     padding: 10px;
     width: 100%;
@@ -54,5 +54,20 @@ slide {
     box-shadow: 3px 10px 15px -3px rgba(0,0,0,0.61);
 }
 .menuitem {
-    width: 
+    float: left;
+    margin: 10px;
+    display: block;
+    background-color: #fc5246;
+    border-radius: .4em;
+    padding: 1em;
+    width: 40%; 
+    border: 1px black;
+}
+.menuitem > img {
+    width: 90%;
+    height: auto;   
+}
+.map-container {
+    height: 95%;
+    width: 95%;
 }

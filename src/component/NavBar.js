@@ -6,7 +6,7 @@ class NavBar extends React.Component {
     render() {
       return ( 
         <Navbar className="navbar">
-          <i className="fas fa-tree"></i>  Foodbear
+          <i className="fab fa-centercode"></i>Restaurante Luca Galati
         </Navbar>
       );
     };
